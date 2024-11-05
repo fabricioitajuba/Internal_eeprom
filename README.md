@@ -11,7 +11,7 @@ Antes de gravar o dado na memória, o dado é lido na posição e só grava se o
 Para guardar apenas um bit (0 ou 1) escolha um endereço e qual bit do byte você quer gravar.
 
 ### Exemplo:
-
+```
 #define OFF 0
 #define ON 1
 
@@ -27,13 +27,13 @@ write_int1_eeprom(status, port2, OFF);
 
 //para ler um bit no registro status
 bool teste = read_int1_eeprom(status, port1);
-
+```
 
 Para adicionar a biblioteca, faça o download e na IDE do Arduino, vá em:
 Sketch->Include Library->Add .ZIP Library "local da biblioteca .zip"
 
 ### Essa biblioteca permite as seguintes funções:
-
+```
 void write_int1_eeprom(uint16_t Address, uint8_t bitPosition, bool data);//1 Byte x 8 bit
 bool read_int1_eeprom(uint16_t Address, uint8_t bitPosition);//1 Byte x 8 bit
 
@@ -54,3 +54,4 @@ long read_long_eeprom(uint16_t Address);//4 Byte
 
 void write_float_eeprom(uint16_t Address, float data);//4 Byte
 float read_float_eeprom(uint16_t Address);//4 Byte
+```
